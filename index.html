@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quer namorar comigo?</h1>
+        <p>Eu te adoro muito e gostaria de saber se você aceita namorar comigo.</p>
+        <div class="buttons">
+            <button class="btn yes-btn" onclick="confirmarPedido()">Sim</button>
+            <button class="btn no-btn" id="noBtn" onclick="explodirBotao()">Não</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmarPedido() {
+            alert('Você aceitou o pedido de namoro! Que legal! 💖');
+        }
+
+        function explodirBotao() {
+            const noBtn = document.getElementById('noBtn');
+            
+            noBtn.classList.add('explode');
+            
+            setTimeout(() => {
+                noBtn.disabled = true;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
